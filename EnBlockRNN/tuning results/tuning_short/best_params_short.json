@@ -1,0 +1,89 @@
+{
+  "horizon": "short",
+  "study_name": "enblockrnn_short_H4",
+  "best_value": 142.71019405788846,
+  "best_trial": 88,
+  "best_params": {
+    "hidden_dim": 79,
+    "n_rnn_layers": 3,
+    "lr": 0.01162294152249685,
+    "noise_type": "uniform",
+    "noise_std": 0.10286502210214518,
+    "log_transform": false,
+    "dropout": 0.07414859915352559
+  },
+  "fingerprint": {
+    "run_mode": "full",
+    "horizon": "short",
+    "H": 4,
+    "V": 9,
+    "LOOKBACK": 52,
+    "HEAD": "last_state",
+    "LOG_TRANSFORM": true,
+    "M_TRAIN": 2,
+    "NOISE_TYPE": "gaussian",
+    "NOISE_STD": 1.0,
+    "ES_LOSS": "package",
+    "N_EPOCHS": 100,
+    "BATCH_SIZE": 32,
+    "TUNE_SEEDS": [
+      0,
+      1,
+      2
+    ],
+    "TUNE_N_PRED_SAMPLES": 100,
+    "PRUNE": true,
+    "OPTUNA_SEED": 42,
+    "ALPHA": 0.05,
+    "default_params": {
+      "hidden_dim": 32,
+      "n_rnn_layers": 1,
+      "dropout": 0.0,
+      "lr": 0.001,
+      "noise_type": "gaussian",
+      "noise_std": 1.0,
+      "log_transform": true
+    },
+    "search_space": {
+      "hidden_dim": [
+        2,
+        100
+      ],
+      "n_rnn_layers": [
+        1,
+        5
+      ],
+      "dropout": [
+        0.0,
+        0.5
+      ],
+      "lr": [
+        1e-05,
+        0.1
+      ],
+      "noise_type": [
+        "gaussian",
+        "uniform"
+      ],
+      "noise_std": [
+        0.1,
+        2.0
+      ],
+      "log_transform": [
+        true,
+        false
+      ]
+    }
+  },
+  "versions": {
+    "python": "3.13.16",
+    "engressionts": "0.1.1",
+    "darts": "0.47.0",
+    "pytorch_lightning": "2.6.6",
+    "torch": "2.11.0+cu130",
+    "optuna": "5.0.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3"
+  },
+  "accelerator": "gpu"
+}

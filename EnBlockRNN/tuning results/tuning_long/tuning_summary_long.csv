@@ -1,0 +1,3 @@
+horizon,trial,H,number,val CRPS,sd over seeds,val coverage95,val width95,hidden_dim,n_rnn_layers,lr,noise_type,noise_std,log_transform,dropout
+long,untuned (trial 0),13,0,448.09232729957216,15.140219080737408,0.5934066048690251,1755.8278547014509,32,1,0.001,gaussian,1.0,True,0.0
+long,best,13,91,235.46400451660156,3.837228115614331,0.8076923191547394,1218.2737760997954,76,1,9.299924603037726e-05,gaussian,1.0774175926845966,False,0.0

@@ -1,0 +1,4 @@
+,H (test weeks),V (validation weeks),train weeks,train period,validation period,test period,training windows (tuning),training windows (final),validation origins
+short,4,9,647,2001-12-31 → 2014-05-19,2014-05-26 → 2014-07-21,2014-07-28 → 2014-08-18,592,601,6
+medium,9,13,638,2001-12-31 → 2014-03-17,2014-03-24 → 2014-06-16,2014-06-23 → 2014-08-18,578,591,5
+long,13,26,621,2001-12-31 → 2013-11-18,2013-11-25 → 2014-05-19,2014-05-26 → 2014-08-18,557,583,14

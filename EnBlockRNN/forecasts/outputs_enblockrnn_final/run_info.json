@@ -1,0 +1,179 @@
+{
+  "run_mode": "full",
+  "config": {
+    "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Dengue_datasets/Venezuela_Dengue.xlsx",
+    "LOCAL_PATH": "/kaggle/input/epicasting/Venezuela_Dengue.xlsx",
+    "FREQ": "W-MON",
+    "HORIZONS": {
+      "short": {
+        "H": 4,
+        "V": 9
+      },
+      "medium": {
+        "H": 9,
+        "V": 13
+      },
+      "long": {
+        "H": 13,
+        "V": 26
+      }
+    },
+    "LOOKBACK": 52,
+    "HEAD": "last_state",
+    "LOG_TRANSFORM": true,
+    "M_TRAIN": 2,
+    "NOISE_TYPE": "gaussian",
+    "NOISE_STD": 1.0,
+    "ES_LOSS": "package",
+    "N_EPOCHS": 100,
+    "BATCH_SIZE": 32,
+    "N_TRIALS": 100,
+    "TUNE_SEEDS": [
+      0,
+      1,
+      2
+    ],
+    "TUNE_N_PRED_SAMPLES": 100,
+    "PRUNE": true,
+    "OPTUNA_SEED": 42,
+    "N_PRED_SAMPLES": 100,
+    "N_EVAL_REPEATS": 50,
+    "SEEDS": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "ALPHA": 0.05,
+    "RUN_BENCHMARKS": true,
+    "OUT_DIR": "outputs_enblockrnn_final",
+    "TUNING_INPUTS": [
+      "/kaggle/input",
+      "."
+    ],
+    "REQUIRE_FULL_TUNING": true,
+    "OPTUNA_STORAGE": "sqlite:///outputs_enblockrnn_final/optuna_all_horizons.db"
+  },
+  "tuning_sources": [
+    {
+      "horizon": "short",
+      "H": 4,
+      "file": "/kaggle/input/datasets/nilashamajumdar1/optuna-short/optuna_short.db",
+      "finished": 100,
+      "complete": 54,
+      "pruned": 46,
+      "best_val_CRPS": 142.71019405788846,
+      "best_trial": 88,
+      "settings_checked": "yes"
+    },
+    {
+      "horizon": "medium",
+      "H": 9,
+      "file": "/kaggle/input/datasets/nilashamajumdar1/optuna-medium/optuna_medium.db",
+      "finished": 100,
+      "complete": 52,
+      "pruned": 48,
+      "best_val_CRPS": 85.25960998535156,
+      "best_trial": 79,
+      "settings_checked": "yes"
+    },
+    {
+      "horizon": "long",
+      "H": 13,
+      "file": "/kaggle/input/datasets/nilashamajumdar1/optuna-long/optuna_long.db",
+      "finished": 100,
+      "complete": 64,
+      "pruned": 36,
+      "best_val_CRPS": 235.46400451660156,
+      "best_trial": 91,
+      "settings_checked": "yes"
+    }
+  ],
+  "default_params": {
+    "hidden_dim": 32,
+    "n_rnn_layers": 1,
+    "dropout": 0.0,
+    "lr": 0.001,
+    "noise_type": "gaussian",
+    "noise_std": 1.0,
+    "log_transform": true
+  },
+  "search_space": {
+    "hidden_dim": [
+      2,
+      100
+    ],
+    "n_rnn_layers": [
+      1,
+      5
+    ],
+    "dropout": [
+      0.0,
+      0.5
+    ],
+    "lr": [
+      1e-05,
+      0.1
+    ],
+    "noise_type": [
+      "gaussian",
+      "uniform"
+    ],
+    "noise_std": [
+      0.1,
+      2.0
+    ],
+    "log_transform": [
+      true,
+      false
+    ]
+  },
+  "best_params": {
+    "short": {
+      "hidden_dim": 79,
+      "n_rnn_layers": 3,
+      "lr": 0.01162294152249685,
+      "noise_type": "uniform",
+      "noise_std": 0.10286502210214518,
+      "log_transform": false,
+      "dropout": 0.07414859915352559
+    },
+    "medium": {
+      "hidden_dim": 43,
+      "n_rnn_layers": 3,
+      "lr": 8.826338662298835e-05,
+      "noise_type": "uniform",
+      "noise_std": 0.7164986152320735,
+      "log_transform": true,
+      "dropout": 0.4578603474043508
+    },
+    "long": {
+      "hidden_dim": 76,
+      "n_rnn_layers": 1,
+      "lr": 9.299924603037726e-05,
+      "noise_type": "gaussian",
+      "noise_std": 1.0774175926845966,
+      "log_transform": false,
+      "dropout": 0.0
+    }
+  },
+  "lstm_params": {
+    "hidden_dim": 32,
+    "n_rnn_layers": 1,
+    "dropout": 0.0,
+    "lr": 0.001,
+    "log_transform": true
+  },
+  "versions": {
+    "python": "3.13.16",
+    "engressionts": "0.1.1",
+    "darts": "0.47.0",
+    "pytorch_lightning": "2.6.6",
+    "torch": "2.11.0+cu130",
+    "optuna": "5.0.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3"
+  },
+  "accelerator": "gpu"
+}

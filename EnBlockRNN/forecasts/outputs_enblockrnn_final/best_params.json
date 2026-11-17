@@ -1,0 +1,29 @@
+{
+  "short": {
+    "hidden_dim": 79,
+    "n_rnn_layers": 3,
+    "lr": 0.01162294152249685,
+    "noise_type": "uniform",
+    "noise_std": 0.10286502210214518,
+    "log_transform": false,
+    "dropout": 0.07414859915352559
+  },
+  "medium": {
+    "hidden_dim": 43,
+    "n_rnn_layers": 3,
+    "lr": 8.826338662298835e-05,
+    "noise_type": "uniform",
+    "noise_std": 0.7164986152320735,
+    "log_transform": true,
+    "dropout": 0.4578603474043508
+  },
+  "long": {
+    "hidden_dim": 76,
+    "n_rnn_layers": 1,
+    "lr": 9.299924603037726e-05,
+    "noise_type": "gaussian",
+    "noise_std": 1.0774175926845966,
+    "log_transform": false,
+    "dropout": 0.0
+  }
+}

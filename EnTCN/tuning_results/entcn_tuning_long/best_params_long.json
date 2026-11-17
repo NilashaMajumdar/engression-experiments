@@ -1,0 +1,95 @@
+{
+  "horizon": "long",
+  "study_name": "entcn_long_H13",
+  "best_value": 250.3027906871977,
+  "best_trial": 75,
+  "best_params": {
+    "kernel_size": 7,
+    "num_filters": 29,
+    "num_layers": 1,
+    "dropout": 0.3470520504517036,
+    "lr": 0.008977946338804567,
+    "noise_type": "gaussian",
+    "noise_std": 0.13755550264155753,
+    "log_transform": true
+  },
+  "fingerprint": {
+    "run_mode": "full",
+    "horizon": "long",
+    "H": 13,
+    "V": 26,
+    "LOOKBACK": 52,
+    "HEAD": "last_step",
+    "LOG_TRANSFORM": true,
+    "M_TRAIN": 2,
+    "NOISE_TYPE": "gaussian",
+    "NOISE_STD": 1.0,
+    "ES_LOSS": "package",
+    "N_EPOCHS": 100,
+    "BATCH_SIZE": 32,
+    "TUNE_SEEDS": [
+      0,
+      1,
+      2
+    ],
+    "TUNE_N_PRED_SAMPLES": 100,
+    "PRUNE": true,
+    "OPTUNA_SEED": 42,
+    "ALPHA": 0.05,
+    "default_params": {
+      "kernel_size": 3,
+      "num_filters": 3,
+      "num_layers": 4,
+      "dropout": 0.2,
+      "lr": 0.001,
+      "noise_type": "gaussian",
+      "noise_std": 1.0,
+      "log_transform": true
+    },
+    "search_space": {
+      "kernel_size": [
+        2,
+        7
+      ],
+      "num_filters": [
+        2,
+        100
+      ],
+      "num_layers": [
+        1,
+        5
+      ],
+      "dropout": [
+        0.0,
+        0.5
+      ],
+      "lr": [
+        1e-05,
+        0.1
+      ],
+      "noise_type": [
+        "gaussian",
+        "uniform"
+      ],
+      "noise_std": [
+        0.1,
+        2.0
+      ],
+      "log_transform": [
+        true,
+        false
+      ]
+    }
+  },
+  "versions": {
+    "python": "3.13.16",
+    "engressionts": "0.1.1",
+    "darts": "0.47.0",
+    "pytorch_lightning": "2.6.6",
+    "torch": "2.11.0+cu130",
+    "optuna": "5.0.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3"
+  },
+  "accelerator": "gpu"
+}

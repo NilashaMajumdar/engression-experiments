@@ -1,0 +1,110 @@
+{
+  "horizon": "long",
+  "study_name": "entransformer_long_H13",
+  "best_value": 270.36651066371377,
+  "best_trial": 76,
+  "best_params": {
+    "d_model": 128,
+    "nhead": 2,
+    "num_encoder_layers": 2,
+    "num_decoder_layers": 2,
+    "dim_feedforward": 169,
+    "dropout": 0.001993790617050747,
+    "lr": 2.2594600569654948e-05,
+    "noise_type": "gaussian",
+    "noise_std": 1.6169063899850848,
+    "log_transform": false
+  },
+  "fingerprint": {
+    "run_mode": "full",
+    "horizon": "long",
+    "H": 13,
+    "V": 26,
+    "LOOKBACK": 52,
+    "LOG_TRANSFORM": true,
+    "M_TRAIN": 2,
+    "NOISE_TYPE": "gaussian",
+    "NOISE_STD": 1.0,
+    "ES_LOSS": "package",
+    "N_EPOCHS": 100,
+    "BATCH_SIZE": 32,
+    "TUNE_SEEDS": [
+      0,
+      1,
+      2
+    ],
+    "TUNE_N_PRED_SAMPLES": 100,
+    "PRUNE": true,
+    "OPTUNA_SEED": 42,
+    "ALPHA": 0.05,
+    "default_params": {
+      "d_model": 64,
+      "nhead": 4,
+      "num_encoder_layers": 3,
+      "num_decoder_layers": 3,
+      "dim_feedforward": 512,
+      "dropout": 0.1,
+      "lr": 0.001,
+      "noise_type": "gaussian",
+      "noise_std": 1.0,
+      "log_transform": true
+    },
+    "search_space": {
+      "d_model": [
+        16,
+        32,
+        64,
+        128
+      ],
+      "nhead": [
+        1,
+        2,
+        4,
+        8
+      ],
+      "num_encoder_layers": [
+        1,
+        3
+      ],
+      "num_decoder_layers": [
+        1,
+        3
+      ],
+      "dim_feedforward": [
+        32,
+        512
+      ],
+      "dropout": [
+        0.0,
+        0.5
+      ],
+      "lr": [
+        1e-05,
+        0.1
+      ],
+      "noise_type": [
+        "gaussian",
+        "uniform"
+      ],
+      "noise_std": [
+        0.1,
+        2.0
+      ],
+      "log_transform": [
+        true,
+        false
+      ]
+    }
+  },
+  "versions": {
+    "python": "3.13.16",
+    "engressionts": "0.1.1",
+    "darts": "0.47.0",
+    "pytorch_lightning": "2.6.6",
+    "torch": "2.11.0+cu130",
+    "optuna": "5.0.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3"
+  },
+  "accelerator": "gpu"
+}

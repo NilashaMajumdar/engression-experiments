@@ -1,0 +1,3 @@
+horizon,trial,H,number,val CRPS,sd over seeds,val coverage95,val width95,kernel_size,num_filters,num_layers,dropout,lr,noise_type,noise_std,log_transform
+medium,untuned (trial 0),9,0,138.9115956624349,1.4694641813962626,0.800000011920929,733.734765625,3,3,4,0.2,0.001,gaussian,1.0,True
+medium,best,9,21,73.55573145548503,4.913569280974846,0.607407420873642,222.74830322265623,5,85,2,0.17827452560518114,0.0023059883326200315,gaussian,0.1280785801776237,True
