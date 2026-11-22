@@ -1,0 +1,128 @@
+{
+  "dataset": "dengue",
+  "model": "enblockrnn",
+  "horizon": "long",
+  "H": 13,
+  "kind": "engression",
+  "run_mode": "full",
+  "name": "EnBlockRNN",
+  "params": {
+    "hidden_dim": 76,
+    "n_rnn_layers": 1,
+    "lr": 9.299924603037726e-05,
+    "noise_type": "gaussian",
+    "noise_std": 1.0774175926845966,
+    "log_transform": false
+  },
+  "fingerprint": {
+    "run_mode": "full",
+    "horizon": "long",
+    "H": 13,
+    "V": 26,
+    "LOOKBACK": 52,
+    "HEAD": "last_state",
+    "LOG_TRANSFORM": true,
+    "M_TRAIN": 2,
+    "NOISE_TYPE": "gaussian",
+    "NOISE_STD": 1.0,
+    "ES_LOSS": "package",
+    "N_EPOCHS": 100,
+    "BATCH_SIZE": 32,
+    "TUNE_SEEDS": [
+      0,
+      1,
+      2
+    ],
+    "TUNE_N_PRED_SAMPLES": 100,
+    "PRUNE": true,
+    "OPTUNA_SEED": 42,
+    "ALPHA": 0.05,
+    "default_params": {
+      "hidden_dim": 32,
+      "n_rnn_layers": 1,
+      "dropout": 0.0,
+      "lr": 0.001,
+      "noise_type": "gaussian",
+      "noise_std": 1.0,
+      "log_transform": true
+    },
+    "search_space": {
+      "hidden_dim": [
+        2,
+        100
+      ],
+      "n_rnn_layers": [
+        1,
+        5
+      ],
+      "dropout": [
+        0.0,
+        0.5
+      ],
+      "lr": [
+        1e-05,
+        0.1
+      ],
+      "noise_type": [
+        "gaussian",
+        "uniform"
+      ],
+      "noise_std": [
+        0.1,
+        2.0
+      ],
+      "log_transform": [
+        true,
+        false
+      ]
+    }
+  },
+  "times": [
+    {
+      "seed": 0,
+      "train_seconds": 9.186614990234375,
+      "predict_seconds_per_ensemble": 0.08033842086791992
+    },
+    {
+      "seed": 1,
+      "train_seconds": 9.124505758285522,
+      "predict_seconds_per_ensemble": 0.08304139614105224
+    },
+    {
+      "seed": 2,
+      "train_seconds": 9.284342527389526,
+      "predict_seconds_per_ensemble": 0.08285326957702636
+    },
+    {
+      "seed": 3,
+      "train_seconds": 9.210453510284424,
+      "predict_seconds_per_ensemble": 0.07999955654144288
+    },
+    {
+      "seed": 4,
+      "train_seconds": 9.243979692459106,
+      "predict_seconds_per_ensemble": 0.08176560878753662
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_eval_repeats": 50,
+  "n_pred_samples": 100,
+  "likelihood": null,
+  "versions": {
+    "python": "3.13.16",
+    "engressionts": "0.1.1",
+    "darts": "0.47.0",
+    "pytorch_lightning": "2.6.6",
+    "torch": "2.11.0+cu130",
+    "optuna": "5.1.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3"
+  },
+  "accelerator": "gpu"
+}

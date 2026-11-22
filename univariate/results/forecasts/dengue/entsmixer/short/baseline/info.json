@@ -1,0 +1,134 @@
+{
+  "dataset": "dengue",
+  "model": "entsmixer",
+  "horizon": "short",
+  "H": 4,
+  "kind": "baseline",
+  "run_mode": "full",
+  "name": "TSMixer",
+  "params": {
+    "hidden_size": 42,
+    "ff_size": 6,
+    "num_blocks": 2,
+    "dropout": 0.24421372648050604,
+    "lr": 0.004775050157369078,
+    "noise_type": "gaussian",
+    "noise_std": 0.12694307164772925,
+    "log_transform": true
+  },
+  "fingerprint": {
+    "run_mode": "full",
+    "horizon": "short",
+    "H": 4,
+    "V": 9,
+    "LOOKBACK": 52,
+    "LOG_TRANSFORM": true,
+    "M_TRAIN": 2,
+    "NOISE_TYPE": "gaussian",
+    "NOISE_STD": 1.0,
+    "ES_LOSS": "package",
+    "N_EPOCHS": 100,
+    "BATCH_SIZE": 32,
+    "TUNE_SEEDS": [
+      0,
+      1,
+      2
+    ],
+    "TUNE_N_PRED_SAMPLES": 100,
+    "PRUNE": true,
+    "OPTUNA_SEED": 42,
+    "ALPHA": 0.05,
+    "default_params": {
+      "hidden_size": 64,
+      "ff_size": 64,
+      "num_blocks": 2,
+      "dropout": 0.1,
+      "lr": 0.001,
+      "noise_type": "gaussian",
+      "noise_std": 1.0,
+      "log_transform": true
+    },
+    "search_space": {
+      "hidden_size": [
+        2,
+        100
+      ],
+      "ff_size": [
+        2,
+        100
+      ],
+      "num_blocks": [
+        1,
+        5
+      ],
+      "dropout": [
+        0.0,
+        0.5
+      ],
+      "lr": [
+        1e-05,
+        0.1
+      ],
+      "noise_type": [
+        "gaussian",
+        "uniform"
+      ],
+      "noise_std": [
+        0.1,
+        2.0
+      ],
+      "log_transform": [
+        true,
+        false
+      ]
+    }
+  },
+  "times": [
+    {
+      "seed": 0,
+      "train_seconds": 14.069769620895386,
+      "predict_seconds_per_ensemble": 0.08306114196777344
+    },
+    {
+      "seed": 1,
+      "train_seconds": 14.122932195663452,
+      "predict_seconds_per_ensemble": 0.08218945503234863
+    },
+    {
+      "seed": 2,
+      "train_seconds": 14.13022232055664,
+      "predict_seconds_per_ensemble": 0.08236155986785888
+    },
+    {
+      "seed": 3,
+      "train_seconds": 13.920097589492798,
+      "predict_seconds_per_ensemble": 0.08667794704437255
+    },
+    {
+      "seed": 4,
+      "train_seconds": 13.953683376312256,
+      "predict_seconds_per_ensemble": 0.0838738203048706
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_eval_repeats": 50,
+  "n_pred_samples": 100,
+  "likelihood": "gaussian",
+  "versions": {
+    "python": "3.13.16",
+    "engressionts": "0.1.1",
+    "darts": "0.47.0",
+    "pytorch_lightning": "2.6.6",
+    "torch": "2.11.0+cu130",
+    "optuna": "5.1.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3"
+  },
+  "accelerator": "gpu"
+}

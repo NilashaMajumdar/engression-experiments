@@ -1,0 +1,77 @@
+{
+  "config": {
+    "DATASETS": {
+      "dengue": {
+        "url": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Dengue_datasets/Venezuela_Dengue.xlsx",
+        "local": "/kaggle/input/epicasting/Venezuela_Dengue.xlsx",
+        "label": "Venezuela dengue"
+      },
+      "malaria": {
+        "url": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+        "local": "/kaggle/input/epicasting/Venezuela_Malaria.xlsx",
+        "label": "Venezuela malaria"
+      }
+    },
+    "FREQ": "W-MON",
+    "HORIZONS": {
+      "short": {
+        "H": 4,
+        "V": 9
+      },
+      "long": {
+        "H": 13,
+        "V": 26
+      }
+    },
+    "LOOKBACK": 52,
+    "M_TRAIN": 2,
+    "N_EPOCHS": 100,
+    "BATCH_SIZE": 32,
+    "N_TRIALS": 100,
+    "N_PRED_SAMPLES": 100,
+    "N_EVAL_REPEATS": 50,
+    "SEEDS": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "ALPHA": 0.05,
+    "BASELINE_LIKELIHOOD": "gaussian",
+    "PLOT_HISTORY": 20,
+    "PLOT_YMAX_FACTOR": 1.6,
+    "OUT_DIR": "outputs_results",
+    "TUNING_INPUTS": [
+      "/kaggle/input",
+      "."
+    ],
+    "RESULT_INPUTS": [
+      "/kaggle/input"
+    ],
+    "REQUIRE_FULL_TUNING": true
+  },
+  "run_mode": "full",
+  "run_models_this_session": [
+    "enblockrnn",
+    "entcn",
+    "entransformer",
+    "entsmixer",
+    "enbeats",
+    "enhits",
+    "entide"
+  ],
+  "versions": {
+    "python": "3.13.16",
+    "engressionts": "0.1.1",
+    "darts": "0.47.0",
+    "pytorch_lightning": "2.6.6",
+    "torch": "2.11.0+cu130",
+    "optuna": "5.1.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3"
+  },
+  "accelerator": "gpu",
+  "missing_tuning": [],
+  "n_combinations": 56
+}

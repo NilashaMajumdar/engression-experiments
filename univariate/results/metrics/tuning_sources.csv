@@ -1,0 +1,29 @@
+dataset,model,horizon,finished,complete,best_trial,best_val_CRPS,trial0_val_CRPS,settings_checked,note,file
+dengue,EnBlockRNN,short,100,54,88,142.7,340.2,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/enblockrnn_optuna_short_dengue.db
+dengue,EnBlockRNN,long,100,64,91,235.5,448.1,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/enblockrnn_optuna_long_dengue.db
+dengue,EnTCN,short,100,87,84,79.7,302.6,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entcn_optuna_short_dengue.db
+dengue,EnTCN,long,100,64,75,250.3,312.2,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entcn_optuna_long_dengue.db
+dengue,EnTransformer,short,100,49,11,137.3,353.4,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entransformers_optuna_short_dengue.db
+dengue,EnTransformer,long,100,61,76,270.4,442.2,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entransformers_optuna_long_dengue.db
+dengue,EnTSMixer,short,100,56,81,190.0,377.2,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entsmixer_optuna_short_dengue.db
+dengue,EnTSMixer,long,100,56,60,285.0,553.4,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entsmixer_optuna_long_dengue.db
+dengue,EnBEATS,short,100,75,95,115.0,323.2,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/enbeats_optuna_short_dengue.db
+dengue,EnBEATS,long,100,61,97,209.8,393.8,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/enbeats_optuna_long_dengue.db
+dengue,EnHiTS,short,100,70,90,120.8,297.3,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/enhits_optuna_short_dengue.db
+dengue,EnHiTS,long,100,52,85,207.6,282.5,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/enhits_optuna_long_dengue.db
+dengue,EnTiDE,short,100,35,61,120.6,228.3,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entide_optuna_short_dengue.db
+dengue,EnTiDE,long,100,54,53,246.6,283.3,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entide_optuna_long_dengue.db
+malaria,EnBlockRNN,short,100,63,94,80.2,104.1,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/enblockrnn_optuna_short_malaria.db
+malaria,EnBlockRNN,long,100,53,47,206.3,281.0,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/enblockrnn_optuna_long_malaria.db
+malaria,EnTCN,short,100,74,56,73.1,113.3,yes,,/kaggle/input/datasets/nilashamajumdar1/entcn-short-malaria/entcn_optuna_short_malaria.db
+malaria,EnTCN,long,100,65,92,136.9,245.8,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entcn_optuna_long_malaria.db
+malaria,EnTransformer,short,100,64,82,80.7,96.1,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entransformers_optuna_short_malaria.db
+malaria,EnTransformer,long,100,70,65,123.7,223.9,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entransformers_optuna_long_malaria.db
+malaria,EnTSMixer,short,100,54,88,72.8,89.3,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entsmixer_optuna_short_malaria.db
+malaria,EnTSMixer,long,100,49,58,132.7,179.0,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entsmixer_optuna_long_malaria.db
+malaria,EnBEATS,short,96,63,73,71.3,94.9,yes,"accepted as is: search space {'num_layers': [1, 5], 'layer_widths': [8, 256]} instead of {'num_layers': [1, 4], 'layer_widths': [16, 256]}, 96 of 100 trials",/kaggle/input/datasets/nilashamajumdar1/tuning-results/enbeats_optuna_short_malaria.db
+malaria,EnBEATS,long,100,32,49,194.5,314.7,yes,"accepted as is: search space {'num_layers': [1, 5], 'layer_widths': [8, 256]} instead of {'num_layers': [1, 4], 'layer_widths': [16, 256]}",/kaggle/input/datasets/nilashamajumdar1/tuning-results/enbeats_optuna_long_malaria.db
+malaria,EnHiTS,short,100,49,98,71.1,97.3,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/enhits_optuna_short_malaria.db
+malaria,EnHiTS,long,100,61,96,130.5,240.5,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/enhits_optuna_long_malaria.db
+malaria,EnTiDE,short,100,60,71,71.2,87.1,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entide_optuna_short_malaria.db
+malaria,EnTiDE,long,100,32,57,167.5,205.9,yes,,/kaggle/input/datasets/nilashamajumdar1/tuning-results/entide_optuna_long_malaria.db

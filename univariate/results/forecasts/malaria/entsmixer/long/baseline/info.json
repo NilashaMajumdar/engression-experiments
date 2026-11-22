@@ -1,0 +1,135 @@
+{
+  "dataset": "malaria",
+  "model": "entsmixer",
+  "horizon": "long",
+  "H": 13,
+  "kind": "baseline",
+  "run_mode": "full",
+  "name": "TSMixer",
+  "params": {
+    "hidden_size": 73,
+    "ff_size": 43,
+    "num_blocks": 3,
+    "dropout": 0.1753702215629017,
+    "lr": 0.0010773209599955348,
+    "noise_type": "gaussian",
+    "noise_std": 0.8588683793665405,
+    "log_transform": true
+  },
+  "fingerprint": {
+    "run_mode": "full",
+    "horizon": "long",
+    "H": 13,
+    "V": 26,
+    "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+    "LOOKBACK": 52,
+    "LOG_TRANSFORM": true,
+    "M_TRAIN": 2,
+    "NOISE_TYPE": "gaussian",
+    "NOISE_STD": 1.0,
+    "ES_LOSS": "package",
+    "N_EPOCHS": 100,
+    "BATCH_SIZE": 32,
+    "TUNE_SEEDS": [
+      0,
+      1,
+      2
+    ],
+    "TUNE_N_PRED_SAMPLES": 100,
+    "PRUNE": true,
+    "OPTUNA_SEED": 42,
+    "ALPHA": 0.05,
+    "default_params": {
+      "hidden_size": 64,
+      "ff_size": 64,
+      "num_blocks": 2,
+      "dropout": 0.1,
+      "lr": 0.001,
+      "noise_type": "gaussian",
+      "noise_std": 1.0,
+      "log_transform": true
+    },
+    "search_space": {
+      "hidden_size": [
+        2,
+        100
+      ],
+      "ff_size": [
+        2,
+        100
+      ],
+      "num_blocks": [
+        1,
+        5
+      ],
+      "dropout": [
+        0.0,
+        0.5
+      ],
+      "lr": [
+        1e-05,
+        0.1
+      ],
+      "noise_type": [
+        "gaussian",
+        "uniform"
+      ],
+      "noise_std": [
+        0.1,
+        2.0
+      ],
+      "log_transform": [
+        true,
+        false
+      ]
+    }
+  },
+  "times": [
+    {
+      "seed": 0,
+      "train_seconds": 16.47693920135498,
+      "predict_seconds_per_ensemble": 0.08445320606231689
+    },
+    {
+      "seed": 1,
+      "train_seconds": 16.663917064666748,
+      "predict_seconds_per_ensemble": 0.08560498237609863
+    },
+    {
+      "seed": 2,
+      "train_seconds": 16.63628363609314,
+      "predict_seconds_per_ensemble": 0.09150699138641358
+    },
+    {
+      "seed": 3,
+      "train_seconds": 17.327435970306396,
+      "predict_seconds_per_ensemble": 0.0871107530593872
+    },
+    {
+      "seed": 4,
+      "train_seconds": 16.927785873413086,
+      "predict_seconds_per_ensemble": 0.08639177322387695
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_eval_repeats": 50,
+  "n_pred_samples": 100,
+  "likelihood": "gaussian",
+  "versions": {
+    "python": "3.13.16",
+    "engressionts": "0.1.1",
+    "darts": "0.47.0",
+    "pytorch_lightning": "2.6.6",
+    "torch": "2.11.0+cu130",
+    "optuna": "5.1.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3"
+  },
+  "accelerator": "gpu"
+}

@@ -1,0 +1,5 @@
+dataset,horizon,H,V,weeks,train + validation weeks,train + validation,test,test mean / validation mean
+dengue,short,4,9,660,656,2001-12-31 → 2014-07-21,2014-07-28 → 2014-08-18,1.63
+dengue,long,13,26,660,647,2001-12-31 → 2014-05-19,2014-05-26 → 2014-08-18,1.09
+malaria,short,4,9,669,665,2001-12-31 → 2014-09-22,2014-09-29 → 2014-10-20,1.01
+malaria,long,13,26,669,656,2001-12-31 → 2014-07-21,2014-07-28 → 2014-10-20,1.11

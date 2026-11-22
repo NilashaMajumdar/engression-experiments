@@ -1,0 +1,148 @@
+{
+  "dataset": "dengue",
+  "model": "enhits",
+  "horizon": "short",
+  "H": 4,
+  "kind": "baseline",
+  "run_mode": "full",
+  "name": "N-HiTS",
+  "params": {
+    "num_stacks": 3,
+    "num_blocks": 3,
+    "num_layers": 1,
+    "layer_widths": 466,
+    "MaxPool1d": false,
+    "dropout": 0.09508056474470152,
+    "lr": 1.7316292927053085e-05,
+    "noise_type": "gaussian",
+    "noise_std": 0.19754272132614178,
+    "log_transform": false
+  },
+  "fingerprint": {
+    "run_mode": "full",
+    "horizon": "short",
+    "H": 4,
+    "V": 9,
+    "LOOKBACK": 52,
+    "HEAD": "last_state",
+    "ACTIVATION": "ReLU",
+    "LOG_TRANSFORM": true,
+    "M_TRAIN": 2,
+    "NOISE_TYPE": "gaussian",
+    "NOISE_STD": 1.0,
+    "ES_LOSS": "package",
+    "N_EPOCHS": 100,
+    "BATCH_SIZE": 32,
+    "TUNE_SEEDS": [
+      0,
+      1,
+      2
+    ],
+    "TUNE_N_PRED_SAMPLES": 100,
+    "PRUNE": true,
+    "OPTUNA_SEED": 42,
+    "ALPHA": 0.05,
+    "default_params": {
+      "num_stacks": 3,
+      "num_blocks": 1,
+      "num_layers": 2,
+      "layer_widths": 512,
+      "MaxPool1d": true,
+      "dropout": 0.1,
+      "lr": 0.001,
+      "noise_type": "gaussian",
+      "noise_std": 1.0,
+      "log_transform": true
+    },
+    "search_space": {
+      "num_stacks": [
+        2,
+        5
+      ],
+      "num_blocks": [
+        1,
+        3
+      ],
+      "num_layers": [
+        1,
+        3
+      ],
+      "layer_widths": [
+        16,
+        512
+      ],
+      "MaxPool1d": [
+        true,
+        false
+      ],
+      "dropout": [
+        0.0,
+        0.5
+      ],
+      "lr": [
+        1e-05,
+        0.1
+      ],
+      "noise_type": [
+        "gaussian",
+        "uniform"
+      ],
+      "noise_std": [
+        0.1,
+        2.0
+      ],
+      "log_transform": [
+        true,
+        false
+      ]
+    }
+  },
+  "times": [
+    {
+      "seed": 0,
+      "train_seconds": 23.103882551193237,
+      "predict_seconds_per_ensemble": 0.09469805240631103
+    },
+    {
+      "seed": 1,
+      "train_seconds": 23.16197633743286,
+      "predict_seconds_per_ensemble": 0.0925832748413086
+    },
+    {
+      "seed": 2,
+      "train_seconds": 23.06957173347473,
+      "predict_seconds_per_ensemble": 0.10356534481048583
+    },
+    {
+      "seed": 3,
+      "train_seconds": 23.397677183151245,
+      "predict_seconds_per_ensemble": 0.09489542007446289
+    },
+    {
+      "seed": 4,
+      "train_seconds": 23.347272396087646,
+      "predict_seconds_per_ensemble": 0.09437153816223144
+    }
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_eval_repeats": 50,
+  "n_pred_samples": 100,
+  "likelihood": "gaussian",
+  "versions": {
+    "python": "3.13.16",
+    "engressionts": "0.1.1",
+    "darts": "0.47.0",
+    "pytorch_lightning": "2.6.6",
+    "torch": "2.11.0+cu130",
+    "optuna": "5.1.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3"
+  },
+  "accelerator": "gpu"
+}

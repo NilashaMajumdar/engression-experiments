@@ -1,0 +1,33 @@
+\begin{table}[t]
+\centering\small
+\caption{Venezuela malaria: test-window accuracy of the engression models and their probabilistic Darts counterparts (mean over 5 training seeds $\times$ 50 ensembles of 100 trajectories). MAE and RMSE use the median forecast; CRPS, coverage and width of the 95\% interval use the samples. Lower is better for MAE, RMSE and CRPS; coverage should be close to the nominal 0.95. Best value per column in bold (interval width is not ranked: a narrow interval is only useful if it covers).}
+\label{tab:malaria}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+ & \multicolumn{5}{c}{H = 4} & \multicolumn{5}{c}{H = 13} \\
+\cmidrule(lr){2-6} \cmidrule(lr){7-11}
+Model & MAE & RMSE & CRPS & Cov. & Width & MAE & RMSE & CRPS & Cov. & Width \\
+\midrule
+EnBlockRNN & 132 & 138 & 90 & 0.77 & 343 & 201 & 233 & 177 & 0.34 & 528 \\
+BlockRNN & 125 & 131 & 79 & 1.00 & 620 & 153 & 192 & 109 & 0.88 & 615 \\
+\addlinespace[2pt]
+EnTCN & 98 & 105 & 64 & 1.00 & 603 & 152 & 186 & 107 & \textbf{0.92} & 697 \\
+TCN & 87 & 112 & 76 & 1.00 & 867 & 243 & 286 & 170 & 0.91 & 1142 \\
+\addlinespace[2pt]
+EnTransformer & 118 & 129 & 89 & 0.43 & 248 & 185 & 215 & 153 & 0.42 & 293 \\
+Transformer & 241 & 271 & 180 & 0.75 & 703 & 429 & 456 & 348 & 0.29 & 545 \\
+\addlinespace[2pt]
+EnTSMixer & 136 & 148 & 88 & 0.98 & 559 & \textbf{112} & \textbf{142} & \textbf{83} & 0.82 & 417 \\
+TSMixer & 108 & 115 & 75 & 1.00 & 800 & 123 & 154 & 90 & 0.98 & 768 \\
+\addlinespace[2pt]
+EnBEATS & 106 & 112 & 67 & 0.98 & 403 & 153 & 187 & 146 & 0.17 & 56 \\
+N-BEATS & 109 & 129 & 80 & \textbf{0.95} & 749 & 128 & 155 & 102 & 1.00 & 1139 \\
+\addlinespace[2pt]
+EnHiTS & \textbf{69} & \textbf{79} & \textbf{49} & 0.96 & 382 & 120 & 152 & 94 & 1.00 & 970 \\
+N-HiTS & 96 & 114 & 72 & 0.71 & 299 & 118 & 147 & 139 & 1.00 & 2043 \\
+\addlinespace[2pt]
+EnTiDE & 85 & 97 & 62 & 1.00 & 659 & 263 & 302 & 229 & 0.28 & 267 \\
+TiDE & 136 & 156 & 99 & 0.97 & 938 & 256 & 293 & 184 & 0.78 & 899 \\
+\bottomrule
+\end{tabular}
+\end{table}

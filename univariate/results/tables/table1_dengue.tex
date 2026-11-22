@@ -1,0 +1,33 @@
+\begin{table}[t]
+\centering\small
+\caption{Venezuela dengue: test-window accuracy of the engression models and their probabilistic Darts counterparts (mean over 5 training seeds $\times$ 50 ensembles of 100 trajectories). MAE and RMSE use the median forecast; CRPS, coverage and width of the 95\% interval use the samples. Lower is better for MAE, RMSE and CRPS; coverage should be close to the nominal 0.95. Best value per column in bold (interval width is not ranked: a narrow interval is only useful if it covers).}
+\label{tab:dengue}
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+ & \multicolumn{5}{c}{H = 4} & \multicolumn{5}{c}{H = 13} \\
+\cmidrule(lr){2-6} \cmidrule(lr){7-11}
+Model & MAE & RMSE & CRPS & Cov. & Width & MAE & RMSE & CRPS & Cov. & Width \\
+\midrule
+EnBlockRNN & 201 & 249 & 165 & 0.54 & 392 & 709 & 806 & 575 & 0.40 & 805 \\
+BlockRNN & 204 & 246 & 164 & 0.54 & 459 & 595 & 692 & 471 & 0.43 & 921 \\
+\addlinespace[2pt]
+EnTCN & 371 & 438 & 329 & 0.25 & 275 & 572 & 670 & 515 & 0.11 & 355 \\
+TCN & 381 & 445 & 263 & 0.80 & 873 & 516 & \textbf{617} & \textbf{333} & \textbf{0.96} & 1275 \\
+\addlinespace[2pt]
+EnTransformer & 442 & 490 & 301 & 1.00 & 2254 & \textbf{511} & 626 & 376 & 0.96 & 2363 \\
+Transformer & 931 & 1050 & 858 & 0.25 & 531 & 1032 & 1145 & 1011 & 0.08 & 167 \\
+\addlinespace[2pt]
+EnTSMixer & 176 & 208 & 126 & 0.88 & 812 & 736 & 849 & 618 & 0.38 & 687 \\
+TSMixer & 207 & 265 & 145 & 0.99 & 1124 & 608 & 709 & 457 & 0.43 & 1067 \\
+\addlinespace[2pt]
+EnBEATS & 205 & 242 & 145 & 0.77 & 640 & 630 & 713 & 563 & 0.08 & 385 \\
+N-BEATS & 342 & 403 & 244 & 0.71 & 934 & 609 & 678 & 574 & 0.06 & 217 \\
+\addlinespace[2pt]
+EnHiTS & \textbf{137} & \textbf{164} & \textbf{100} & 0.80 & 437 & 551 & 625 & 496 & 0.12 & 352 \\
+N-HiTS & 308 & 361 & 209 & \textbf{0.93} & 1382 & 676 & 763 & 589 & 0.10 & 585 \\
+\addlinespace[2pt]
+EnTiDE & 252 & 295 & 216 & 0.36 & 328 & 766 & 876 & 669 & 0.19 & 574 \\
+TiDE & 8236415381989 & 12745861347272 & 10566701531557 & 1.00 & 160389585977393 & 723 & 842 & 518 & 0.68 & 1258 \\
+\bottomrule
+\end{tabular}
+\end{table}

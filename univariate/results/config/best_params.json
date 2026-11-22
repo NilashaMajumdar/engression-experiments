@@ -1,0 +1,2458 @@
+{
+  "dengue/enblockrnn/short": {
+    "params": {
+      "hidden_dim": 79,
+      "n_rnn_layers": 3,
+      "lr": 0.01162294152249685,
+      "noise_type": "uniform",
+      "noise_std": 0.10286502210214518,
+      "log_transform": false,
+      "dropout": 0.07414859915352559
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "hidden_dim": 32,
+        "n_rnn_layers": 1,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "hidden_dim": [
+          2,
+          100
+        ],
+        "n_rnn_layers": [
+          1,
+          5
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/enblockrnn/long": {
+    "params": {
+      "hidden_dim": 76,
+      "n_rnn_layers": 1,
+      "lr": 9.299924603037726e-05,
+      "noise_type": "gaussian",
+      "noise_std": 1.0774175926845966,
+      "log_transform": false
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "hidden_dim": 32,
+        "n_rnn_layers": 1,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "hidden_dim": [
+          2,
+          100
+        ],
+        "n_rnn_layers": [
+          1,
+          5
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/entcn/short": {
+    "params": {
+      "kernel_size": 6,
+      "num_filters": 69,
+      "num_layers": 1,
+      "dropout": 0.13301368544426997,
+      "lr": 0.004151717812646126,
+      "noise_type": "uniform",
+      "noise_std": 0.12365257660941295,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "LOOKBACK": 52,
+      "HEAD": "last_step",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "kernel_size": 3,
+        "num_filters": 3,
+        "num_layers": 4,
+        "dropout": 0.2,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "kernel_size": [
+          2,
+          7
+        ],
+        "num_filters": [
+          2,
+          100
+        ],
+        "num_layers": [
+          1,
+          5
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/entcn/long": {
+    "params": {
+      "kernel_size": 7,
+      "num_filters": 29,
+      "num_layers": 1,
+      "dropout": 0.3470520504517036,
+      "lr": 0.008977946338804567,
+      "noise_type": "gaussian",
+      "noise_std": 0.13755550264155753,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "LOOKBACK": 52,
+      "HEAD": "last_step",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "kernel_size": 3,
+        "num_filters": 3,
+        "num_layers": 4,
+        "dropout": 0.2,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "kernel_size": [
+          2,
+          7
+        ],
+        "num_filters": [
+          2,
+          100
+        ],
+        "num_layers": [
+          1,
+          5
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/entransformer/short": {
+    "params": {
+      "d_model": 32,
+      "nhead": 1,
+      "num_encoder_layers": 3,
+      "num_decoder_layers": 2,
+      "dim_feedforward": 243,
+      "dropout": 0.3537492607480189,
+      "lr": 0.0025710853364463615,
+      "noise_type": "gaussian",
+      "noise_std": 0.5409808205743415,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "LOOKBACK": 52,
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "d_model": 64,
+        "nhead": 4,
+        "num_encoder_layers": 3,
+        "num_decoder_layers": 3,
+        "dim_feedforward": 512,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "d_model": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "nhead": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "num_encoder_layers": [
+          1,
+          3
+        ],
+        "num_decoder_layers": [
+          1,
+          3
+        ],
+        "dim_feedforward": [
+          32,
+          512
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/entransformer/long": {
+    "params": {
+      "d_model": 128,
+      "nhead": 2,
+      "num_encoder_layers": 2,
+      "num_decoder_layers": 2,
+      "dim_feedforward": 169,
+      "dropout": 0.001993790617050747,
+      "lr": 2.2594600569654948e-05,
+      "noise_type": "gaussian",
+      "noise_std": 1.6169063899850848,
+      "log_transform": false
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "LOOKBACK": 52,
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "d_model": 64,
+        "nhead": 4,
+        "num_encoder_layers": 3,
+        "num_decoder_layers": 3,
+        "dim_feedforward": 512,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "d_model": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "nhead": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "num_encoder_layers": [
+          1,
+          3
+        ],
+        "num_decoder_layers": [
+          1,
+          3
+        ],
+        "dim_feedforward": [
+          32,
+          512
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/entsmixer/short": {
+    "params": {
+      "hidden_size": 42,
+      "ff_size": 6,
+      "num_blocks": 2,
+      "dropout": 0.24421372648050604,
+      "lr": 0.004775050157369078,
+      "noise_type": "gaussian",
+      "noise_std": 0.12694307164772925,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "LOOKBACK": 52,
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "hidden_size": 64,
+        "ff_size": 64,
+        "num_blocks": 2,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "hidden_size": [
+          2,
+          100
+        ],
+        "ff_size": [
+          2,
+          100
+        ],
+        "num_blocks": [
+          1,
+          5
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/entsmixer/long": {
+    "params": {
+      "hidden_size": 25,
+      "ff_size": 2,
+      "num_blocks": 4,
+      "dropout": 0.01674987842946188,
+      "lr": 0.0001486357805757812,
+      "noise_type": "gaussian",
+      "noise_std": 1.8217521006188528,
+      "log_transform": false
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "LOOKBACK": 52,
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "hidden_size": 64,
+        "ff_size": 64,
+        "num_blocks": 2,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "hidden_size": [
+          2,
+          100
+        ],
+        "ff_size": [
+          2,
+          100
+        ],
+        "num_blocks": [
+          1,
+          5
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/enbeats/short": {
+    "params": {
+      "num_stacks": 4,
+      "num_blocks": 3,
+      "num_layers": 1,
+      "layer_widths": 54,
+      "expansion_coefficient_dim": 4,
+      "lr": 4.991310262683696e-05,
+      "noise_type": "gaussian",
+      "noise_std": 0.3497729646330648,
+      "log_transform": false
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "GENERIC_ARCHITECTURE": true,
+      "ACTIVATION": "ReLU",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "num_stacks": 30,
+        "num_blocks": 1,
+        "num_layers": 4,
+        "layer_widths": 256,
+        "expansion_coefficient_dim": 5,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "num_stacks": [
+          1,
+          30
+        ],
+        "num_blocks": [
+          1,
+          3
+        ],
+        "num_layers": [
+          1,
+          4
+        ],
+        "layer_widths": [
+          16,
+          256
+        ],
+        "expansion_coefficient_dim": [
+          2,
+          10
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/enbeats/long": {
+    "params": {
+      "num_stacks": 3,
+      "num_blocks": 2,
+      "num_layers": 1,
+      "layer_widths": 40,
+      "expansion_coefficient_dim": 9,
+      "lr": 0.0019360092933873399,
+      "noise_type": "gaussian",
+      "noise_std": 0.34405989104028295,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "GENERIC_ARCHITECTURE": true,
+      "ACTIVATION": "ReLU",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "num_stacks": 30,
+        "num_blocks": 1,
+        "num_layers": 4,
+        "layer_widths": 256,
+        "expansion_coefficient_dim": 5,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "num_stacks": [
+          1,
+          30
+        ],
+        "num_blocks": [
+          1,
+          3
+        ],
+        "num_layers": [
+          1,
+          4
+        ],
+        "layer_widths": [
+          16,
+          256
+        ],
+        "expansion_coefficient_dim": [
+          2,
+          10
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/enhits/short": {
+    "params": {
+      "num_stacks": 3,
+      "num_blocks": 3,
+      "num_layers": 1,
+      "layer_widths": 466,
+      "MaxPool1d": false,
+      "dropout": 0.09508056474470152,
+      "lr": 1.7316292927053085e-05,
+      "noise_type": "gaussian",
+      "noise_std": 0.19754272132614178,
+      "log_transform": false
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "ACTIVATION": "ReLU",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "num_stacks": 3,
+        "num_blocks": 1,
+        "num_layers": 2,
+        "layer_widths": 512,
+        "MaxPool1d": true,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "num_stacks": [
+          2,
+          5
+        ],
+        "num_blocks": [
+          1,
+          3
+        ],
+        "num_layers": [
+          1,
+          3
+        ],
+        "layer_widths": [
+          16,
+          512
+        ],
+        "MaxPool1d": [
+          true,
+          false
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/enhits/long": {
+    "params": {
+      "num_stacks": 2,
+      "num_blocks": 1,
+      "num_layers": 1,
+      "layer_widths": 107,
+      "MaxPool1d": true,
+      "dropout": 0.16628649479628083,
+      "lr": 0.0036834235280223952,
+      "noise_type": "uniform",
+      "noise_std": 0.3117223189452947,
+      "log_transform": false
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "ACTIVATION": "ReLU",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "num_stacks": 3,
+        "num_blocks": 1,
+        "num_layers": 2,
+        "layer_widths": 512,
+        "MaxPool1d": true,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "num_stacks": [
+          2,
+          5
+        ],
+        "num_blocks": [
+          1,
+          3
+        ],
+        "num_layers": [
+          1,
+          3
+        ],
+        "layer_widths": [
+          16,
+          512
+        ],
+        "MaxPool1d": [
+          true,
+          false
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/entide/short": {
+    "params": {
+      "num_encoder_layers": 3,
+      "num_decoder_layers": 2,
+      "hidden_size": 237,
+      "decoder_output_dim": 28,
+      "temporal_decoder_hidden": 25,
+      "use_layer_norm": false,
+      "dropout": 0.4003993291904219,
+      "lr": 0.016513500720086206,
+      "noise_type": "gaussian",
+      "noise_std": 0.12995481421001115,
+      "log_transform": false
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "num_encoder_layers": 1,
+        "num_decoder_layers": 1,
+        "hidden_size": 128,
+        "decoder_output_dim": 16,
+        "temporal_decoder_hidden": 32,
+        "use_layer_norm": false,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "num_encoder_layers": [
+          1,
+          3
+        ],
+        "num_decoder_layers": [
+          1,
+          3
+        ],
+        "hidden_size": [
+          16,
+          512
+        ],
+        "decoder_output_dim": [
+          4,
+          32
+        ],
+        "temporal_decoder_hidden": [
+          8,
+          128
+        ],
+        "use_layer_norm": [
+          true,
+          false
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "dengue/entide/long": {
+    "params": {
+      "num_encoder_layers": 1,
+      "num_decoder_layers": 1,
+      "hidden_size": 276,
+      "decoder_output_dim": 4,
+      "temporal_decoder_hidden": 52,
+      "use_layer_norm": true,
+      "dropout": 0.41046033069587184,
+      "lr": 0.000724475072196088,
+      "noise_type": "gaussian",
+      "noise_std": 1.0291672863231232,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "num_encoder_layers": 1,
+        "num_decoder_layers": 1,
+        "hidden_size": 128,
+        "decoder_output_dim": 16,
+        "temporal_decoder_hidden": 32,
+        "use_layer_norm": false,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "num_encoder_layers": [
+          1,
+          3
+        ],
+        "num_decoder_layers": [
+          1,
+          3
+        ],
+        "hidden_size": [
+          16,
+          512
+        ],
+        "decoder_output_dim": [
+          4,
+          32
+        ],
+        "temporal_decoder_hidden": [
+          8,
+          128
+        ],
+        "use_layer_norm": [
+          true,
+          false
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/enblockrnn/short": {
+    "params": {
+      "hidden_dim": 83,
+      "n_rnn_layers": 2,
+      "lr": 0.00035493590802566563,
+      "noise_type": "gaussian",
+      "noise_std": 1.0287090753553645,
+      "log_transform": false,
+      "dropout": 0.4032646456396642
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "hidden_dim": 32,
+        "n_rnn_layers": 1,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "hidden_dim": [
+          2,
+          100
+        ],
+        "n_rnn_layers": [
+          1,
+          5
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/enblockrnn/long": {
+    "params": {
+      "hidden_dim": 62,
+      "n_rnn_layers": 1,
+      "lr": 0.0013018792088189761,
+      "noise_type": "gaussian",
+      "noise_std": 1.379118163179036,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "hidden_dim": 32,
+        "n_rnn_layers": 1,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "hidden_dim": [
+          2,
+          100
+        ],
+        "n_rnn_layers": [
+          1,
+          5
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/entcn/short": {
+    "params": {
+      "kernel_size": 6,
+      "num_filters": 91,
+      "num_layers": 3,
+      "dropout": 0.07640909961200285,
+      "lr": 2.2250597161066756e-05,
+      "noise_type": "gaussian",
+      "noise_std": 1.2311614780427025,
+      "log_transform": false
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "HEAD": "last_step",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "kernel_size": 3,
+        "num_filters": 3,
+        "num_layers": 4,
+        "dropout": 0.2,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "kernel_size": [
+          2,
+          7
+        ],
+        "num_filters": [
+          2,
+          100
+        ],
+        "num_layers": [
+          1,
+          5
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/entcn/long": {
+    "params": {
+      "kernel_size": 4,
+      "num_filters": 90,
+      "num_layers": 5,
+      "dropout": 0.004050391872384755,
+      "lr": 3.3741706903112883e-05,
+      "noise_type": "uniform",
+      "noise_std": 0.9326640035478412,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "HEAD": "last_step",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "kernel_size": 3,
+        "num_filters": 3,
+        "num_layers": 4,
+        "dropout": 0.2,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "kernel_size": [
+          2,
+          7
+        ],
+        "num_filters": [
+          2,
+          100
+        ],
+        "num_layers": [
+          1,
+          5
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/entransformer/short": {
+    "params": {
+      "d_model": 64,
+      "nhead": 8,
+      "num_encoder_layers": 1,
+      "num_decoder_layers": 3,
+      "dim_feedforward": 89,
+      "dropout": 0.09426378150438008,
+      "lr": 0.0006770517738282422,
+      "noise_type": "uniform",
+      "noise_std": 1.4022739238609787,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "d_model": 64,
+        "nhead": 4,
+        "num_encoder_layers": 3,
+        "num_decoder_layers": 3,
+        "dim_feedforward": 512,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "d_model": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "nhead": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "num_encoder_layers": [
+          1,
+          3
+        ],
+        "num_decoder_layers": [
+          1,
+          3
+        ],
+        "dim_feedforward": [
+          32,
+          512
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/entransformer/long": {
+    "params": {
+      "d_model": 128,
+      "nhead": 8,
+      "num_encoder_layers": 1,
+      "num_decoder_layers": 3,
+      "dim_feedforward": 47,
+      "dropout": 0.33745976914488085,
+      "lr": 0.000299625414707401,
+      "noise_type": "uniform",
+      "noise_std": 1.4262805546741628,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "d_model": 64,
+        "nhead": 4,
+        "num_encoder_layers": 3,
+        "num_decoder_layers": 3,
+        "dim_feedforward": 512,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "d_model": [
+          16,
+          32,
+          64,
+          128
+        ],
+        "nhead": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "num_encoder_layers": [
+          1,
+          3
+        ],
+        "num_decoder_layers": [
+          1,
+          3
+        ],
+        "dim_feedforward": [
+          32,
+          512
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/entsmixer/short": {
+    "params": {
+      "hidden_size": 90,
+      "ff_size": 92,
+      "num_blocks": 1,
+      "dropout": 0.013675752784161728,
+      "lr": 0.00012877035289961594,
+      "noise_type": "gaussian",
+      "noise_std": 0.8679442565230867,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "hidden_size": 64,
+        "ff_size": 64,
+        "num_blocks": 2,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "hidden_size": [
+          2,
+          100
+        ],
+        "ff_size": [
+          2,
+          100
+        ],
+        "num_blocks": [
+          1,
+          5
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/entsmixer/long": {
+    "params": {
+      "hidden_size": 73,
+      "ff_size": 43,
+      "num_blocks": 3,
+      "dropout": 0.1753702215629017,
+      "lr": 0.0010773209599955348,
+      "noise_type": "gaussian",
+      "noise_std": 0.8588683793665405,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "hidden_size": 64,
+        "ff_size": 64,
+        "num_blocks": 2,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "hidden_size": [
+          2,
+          100
+        ],
+        "ff_size": [
+          2,
+          100
+        ],
+        "num_blocks": [
+          1,
+          5
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/enbeats/short": {
+    "params": {
+      "num_stacks": 21,
+      "num_blocks": 3,
+      "num_layers": 5,
+      "layer_widths": 86,
+      "expansion_coefficient_dim": 3,
+      "dropout": 0.0035729534661166134,
+      "lr": 5.6387739676839073e-05,
+      "noise_type": "gaussian",
+      "noise_std": 1.0356528762083514,
+      "log_transform": false
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "num_stacks": 30,
+        "num_blocks": 1,
+        "num_layers": 4,
+        "layer_widths": 256,
+        "expansion_coefficient_dim": 5,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "num_stacks": [
+          1,
+          30
+        ],
+        "num_blocks": [
+          1,
+          3
+        ],
+        "num_layers": [
+          1,
+          5
+        ],
+        "layer_widths": [
+          8,
+          256
+        ],
+        "expansion_coefficient_dim": [
+          2,
+          10
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/enbeats/long": {
+    "params": {
+      "num_stacks": 6,
+      "num_blocks": 1,
+      "num_layers": 4,
+      "layer_widths": 31,
+      "expansion_coefficient_dim": 6,
+      "dropout": 0.4968370847492241,
+      "lr": 0.0005012093142488591,
+      "noise_type": "uniform",
+      "noise_std": 0.12993986497394366,
+      "log_transform": false
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "num_stacks": 30,
+        "num_blocks": 1,
+        "num_layers": 4,
+        "layer_widths": 256,
+        "expansion_coefficient_dim": 5,
+        "dropout": 0.0,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "num_stacks": [
+          1,
+          30
+        ],
+        "num_blocks": [
+          1,
+          3
+        ],
+        "num_layers": [
+          1,
+          5
+        ],
+        "layer_widths": [
+          8,
+          256
+        ],
+        "expansion_coefficient_dim": [
+          2,
+          10
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/enhits/short": {
+    "params": {
+      "num_stacks": 5,
+      "num_blocks": 1,
+      "num_layers": 2,
+      "layer_widths": 348,
+      "MaxPool1d": true,
+      "dropout": 0.07262826056415898,
+      "lr": 0.0004865233564634142,
+      "noise_type": "gaussian",
+      "noise_std": 0.35599483284540384,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "ACTIVATION": "ReLU",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "num_stacks": 3,
+        "num_blocks": 1,
+        "num_layers": 2,
+        "layer_widths": 512,
+        "MaxPool1d": true,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "num_stacks": [
+          2,
+          5
+        ],
+        "num_blocks": [
+          1,
+          3
+        ],
+        "num_layers": [
+          1,
+          3
+        ],
+        "layer_widths": [
+          16,
+          512
+        ],
+        "MaxPool1d": [
+          true,
+          false
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/enhits/long": {
+    "params": {
+      "num_stacks": 4,
+      "num_blocks": 3,
+      "num_layers": 2,
+      "layer_widths": 382,
+      "MaxPool1d": false,
+      "dropout": 0.43158374340644534,
+      "lr": 3.0288071520858984e-05,
+      "noise_type": "gaussian",
+      "noise_std": 0.7968708410054103,
+      "log_transform": true
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "ACTIVATION": "ReLU",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "num_stacks": 3,
+        "num_blocks": 1,
+        "num_layers": 2,
+        "layer_widths": 512,
+        "MaxPool1d": true,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "num_stacks": [
+          2,
+          5
+        ],
+        "num_blocks": [
+          1,
+          3
+        ],
+        "num_layers": [
+          1,
+          3
+        ],
+        "layer_widths": [
+          16,
+          512
+        ],
+        "MaxPool1d": [
+          true,
+          false
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/entide/short": {
+    "params": {
+      "num_encoder_layers": 1,
+      "num_decoder_layers": 1,
+      "hidden_size": 30,
+      "decoder_output_dim": 6,
+      "temporal_decoder_hidden": 20,
+      "use_layer_norm": false,
+      "dropout": 0.014581366953502053,
+      "lr": 5.866213502777824e-05,
+      "noise_type": "gaussian",
+      "noise_std": 1.3331593929698795,
+      "log_transform": false
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "short",
+      "H": 4,
+      "V": 9,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "num_encoder_layers": 1,
+        "num_decoder_layers": 1,
+        "hidden_size": 128,
+        "decoder_output_dim": 16,
+        "temporal_decoder_hidden": 32,
+        "use_layer_norm": false,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "num_encoder_layers": [
+          1,
+          3
+        ],
+        "num_decoder_layers": [
+          1,
+          3
+        ],
+        "hidden_size": [
+          16,
+          512
+        ],
+        "decoder_output_dim": [
+          4,
+          32
+        ],
+        "temporal_decoder_hidden": [
+          8,
+          128
+        ],
+        "use_layer_norm": [
+          true,
+          false
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  },
+  "malaria/entide/long": {
+    "params": {
+      "num_encoder_layers": 2,
+      "num_decoder_layers": 1,
+      "hidden_size": 77,
+      "decoder_output_dim": 23,
+      "temporal_decoder_hidden": 10,
+      "use_layer_norm": false,
+      "dropout": 0.30776360850910933,
+      "lr": 0.0003807676363986216,
+      "noise_type": "uniform",
+      "noise_std": 0.4306168795394756,
+      "log_transform": false
+    },
+    "fingerprint": {
+      "run_mode": "full",
+      "horizon": "long",
+      "H": 13,
+      "V": 26,
+      "DATA_URL": "https://raw.githubusercontent.com/mad-stat/Epicasting/main/Datasets/Malaria_datasets/Venezuela_Malaria.xlsx",
+      "LOOKBACK": 52,
+      "HEAD": "last_state",
+      "LOG_TRANSFORM": true,
+      "M_TRAIN": 2,
+      "NOISE_TYPE": "gaussian",
+      "NOISE_STD": 1.0,
+      "ES_LOSS": "package",
+      "N_EPOCHS": 100,
+      "BATCH_SIZE": 32,
+      "TUNE_SEEDS": [
+        0,
+        1,
+        2
+      ],
+      "TUNE_N_PRED_SAMPLES": 100,
+      "PRUNE": true,
+      "OPTUNA_SEED": 42,
+      "ALPHA": 0.05,
+      "default_params": {
+        "num_encoder_layers": 1,
+        "num_decoder_layers": 1,
+        "hidden_size": 128,
+        "decoder_output_dim": 16,
+        "temporal_decoder_hidden": 32,
+        "use_layer_norm": false,
+        "dropout": 0.1,
+        "lr": 0.001,
+        "noise_type": "gaussian",
+        "noise_std": 1.0,
+        "log_transform": true
+      },
+      "search_space": {
+        "num_encoder_layers": [
+          1,
+          3
+        ],
+        "num_decoder_layers": [
+          1,
+          3
+        ],
+        "hidden_size": [
+          16,
+          512
+        ],
+        "decoder_output_dim": [
+          4,
+          32
+        ],
+        "temporal_decoder_hidden": [
+          8,
+          128
+        ],
+        "use_layer_norm": [
+          true,
+          false
+        ],
+        "dropout": [
+          0.0,
+          0.5
+        ],
+        "lr": [
+          1e-05,
+          0.1
+        ],
+        "noise_type": [
+          "gaussian",
+          "uniform"
+        ],
+        "noise_std": [
+          0.1,
+          2.0
+        ],
+        "log_transform": [
+          true,
+          false
+        ]
+      }
+    }
+  }
+}

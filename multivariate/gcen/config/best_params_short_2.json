@@ -1,0 +1,94 @@
+{
+  "horizon": "short",
+  "study_name": "gcen_Mumbai_PM10_short_H30",
+  "best_value": 24.518095221570743,
+  "best_trial": 70,
+  "best_params": {
+    "gcn_out_feat": 10,
+    "lstm_hidden_dim": 100,
+    "lstm_num_layers": 1,
+    "lr": 0.004499313101769844,
+    "noise_dist": "gaussian",
+    "lstm_dropout": 0.0
+  },
+  "finished_trials": 100,
+  "fingerprint": {
+    "run_mode": "full",
+    "horizon": "short",
+    "H": 30,
+    "V": 60,
+    "DATASET": "Mumbai_PM10",
+    "LOOKBACK": 60,
+    "SIGMA2": 0.9948808074595779,
+    "EPSILON": 0.07692416606625796,
+    "DIST_SCALE_KM": 6.25,
+    "SELF_LOOPS": true,
+    "GRAPH_CONV": {
+      "aggregation_type": "mean",
+      "combination_type": "concat",
+      "activation": null
+    },
+    "M_TRAIN": 2,
+    "NOISE_ENCODE": "add",
+    "NOISE_STD": 1.0,
+    "ES_LOSS": "package",
+    "N_EPOCHS": 100,
+    "BATCH_SIZE": 64,
+    "SHUFFLE": false,
+    "GCN_SEED_BASE": 21,
+    "TEMPORAL_SEED_BASE": 9,
+    "TUNE_SEEDS": [
+      0,
+      1,
+      2
+    ],
+    "TUNE_N_PRED_SAMPLES": 100,
+    "PRUNE": true,
+    "OPTUNA_SEED": 42,
+    "ALPHA": 0.05,
+    "ROUND_FORECASTS": true,
+    "default_params": {
+      "gcn_out_feat": 6,
+      "lstm_hidden_dim": 91,
+      "lstm_num_layers": 5,
+      "lstm_dropout": 0.30479293048737066,
+      "lr": 0.00426979947571805,
+      "noise_dist": "uniform"
+    },
+    "search_space": {
+      "gcn_out_feat": [
+        1,
+        10
+      ],
+      "lstm_hidden_dim": [
+        2,
+        100
+      ],
+      "lstm_num_layers": [
+        1,
+        5
+      ],
+      "lstm_dropout": [
+        0.0,
+        0.5
+      ],
+      "lr": [
+        1e-05,
+        0.1
+      ],
+      "noise_dist": [
+        "gaussian",
+        "uniform"
+      ]
+    }
+  },
+  "versions": {
+    "python": "3.13.16",
+    "stengression": "0.0.3",
+    "torch": "2.11.0+cu130",
+    "optuna": "5.1.0",
+    "numpy": "2.1.3",
+    "pandas": "2.3.3"
+  },
+  "device": "cuda"
+}
