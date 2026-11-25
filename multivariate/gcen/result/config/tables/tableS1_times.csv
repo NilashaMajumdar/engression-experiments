@@ -1,0 +1,17 @@
+horizon,model,group,device,train_s_per_fit_mean,train_s_per_fit_sd
+30,DeepAR,Temporal,GPU,358.92,10.44
+30,Prob-iTransformer,Temporal,GPU,80.03,1.47
+30,GpGp,Spatiotemporal,CPU,362.39,0.0
+30,DiffSTG,Spatiotemporal,GPU,639.69,239.21
+30,STESN,Spatiotemporal,CPU,511.72,2.37
+30,MVEN,ST-Engression,GPU,25.04,1.17
+30,GCEN,ST-Engression,GPU,49.63,1.01
+30,STEN,ST-Engression,GPU,21.48,0.3
+90,DeepAR,Temporal,GPU,322.41,1.69
+90,Prob-iTransformer,Temporal,GPU,84.12,0.63
+90,GpGp,Spatiotemporal,CPU,319.52,0.0
+90,DiffSTG,Spatiotemporal,GPU,1393.7,485.07
+90,STESN,Spatiotemporal,CPU,523.32,17.73
+90,MVEN,ST-Engression,GPU,63.22,1.1
+90,GCEN,ST-Engression,GPU,23.81,0.08
+90,STEN,ST-Engression,GPU,88.42,0.16

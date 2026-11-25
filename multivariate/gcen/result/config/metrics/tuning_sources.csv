@@ -1,0 +1,7 @@
+model,horizon,validation CRPS,tuning complete,file
+GCEN,30,23.21,True,/kaggle/input/datasets/vsmuhsina/last-tuning/pm10_testing_inputs/tuning/gcen_short_methodA/best_params_short.json
+GCEN,90,16.91,True,/kaggle/input/datasets/vsmuhsina/last-tuning/pm10_testing_inputs/tuning/gcen_long_methodA/best_params_long.json
+MVEN,30,18.36,True,/kaggle/input/datasets/vsmuhsina/last-tuning/pm10_testing_inputs/tuning/best_hyperparameters_MVEN.json
+MVEN,90,17.8,True,/kaggle/input/datasets/vsmuhsina/last-tuning/pm10_testing_inputs/tuning/best_hyperparameters_MVEN.json
+STEN,30,18.69,True,/kaggle/input/datasets/vsmuhsina/last-tuning/pm10_testing_inputs/tuning/best_hyperparameters_STEN.json
+STEN,90,16.37,True,/kaggle/input/datasets/vsmuhsina/last-tuning/pm10_testing_inputs/tuning/best_hyperparameters_STEN.json
