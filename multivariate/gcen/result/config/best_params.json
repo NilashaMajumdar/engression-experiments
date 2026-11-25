@@ -1,0 +1,58 @@
+{
+  "MVEN": {
+    "30": {
+      "hidden": 61,
+      "layers": 1,
+      "dropout": 0.49950467457864894,
+      "lr": 0.019942729031788852,
+      "noise_dist": "gaussian"
+    },
+    "90": {
+      "hidden": 42,
+      "layers": 3,
+      "dropout": 0.4375326779425164,
+      "lr": 0.02272101658268259,
+      "noise_dist": "gaussian"
+    }
+  },
+  "STEN": {
+    "30": {
+      "emb_dim": 4,
+      "L": 3,
+      "alpha": 3,
+      "hidden": 33,
+      "layers": 1,
+      "dropout": 0.21067277031158754,
+      "lr": 0.0007118303959864516,
+      "noise_dist": "gaussian"
+    },
+    "90": {
+      "emb_dim": 8,
+      "L": 1,
+      "alpha": 1,
+      "hidden": 74,
+      "layers": 2,
+      "dropout": 0.2822345609780339,
+      "lr": 0.00013441469624308442,
+      "noise_dist": "gaussian"
+    }
+  },
+  "GCEN": {
+    "90": {
+      "gcn_out_feat": 7,
+      "lstm_hidden_dim": 39,
+      "lstm_num_layers": 1,
+      "lr": 0.005776305884024453,
+      "noise_dist": "gaussian",
+      "lstm_dropout": 0.0
+    },
+    "30": {
+      "gcn_out_feat": 8,
+      "lstm_hidden_dim": 88,
+      "lstm_num_layers": 1,
+      "lr": 0.0032257073877090888,
+      "noise_dist": "gaussian",
+      "lstm_dropout": 0.0
+    }
+  }
+}
