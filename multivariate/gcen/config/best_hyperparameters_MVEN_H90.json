@@ -1,0 +1,74 @@
+{
+  "model": "MVEN",
+  "dataset": "Mumbai PM10",
+  "data_file": "Mumbai_PM10_Data.csv",
+  "data_md5": "676a4cb67289c98f28029f54bc024198",
+  "stations": [
+    "Boriwali East,IITM",
+    "Boriwali East,MPCB",
+    "Chakala-Andheri East",
+    "Chhatrapati International Airport,Terminal 2",
+    "Colaba",
+    "Deonar,IITM",
+    "Kandiwali East,MPCB",
+    "Khinipada-Bhandup West",
+    "Kurla",
+    "Malad West",
+    "Mazgaon",
+    "Mulund West",
+    "Navy Nagar,Colaba",
+    "Powai",
+    "Sion",
+    "Vile Parle West",
+    "Worli,MPCB"
+  ],
+  "dropped_stations": [],
+  "gap_filled_values": "kept as published",
+  "treat_spikes": false,
+  "p_lag": 60,
+  "batch_size": 64,
+  "m_train": 2,
+  "m_val": 100,
+  "tune_seed": 0,
+  "n_trials_target": 100,
+  "tune_epochs": 100,
+  "pruning": false,
+  "quick_run": false,
+  "objective": "validation CRPS (100 samples)",
+  "versions": {
+    "stengression": "0.0.3",
+    "torch": "2.11.0+cu130",
+    "optuna": "5.1.0"
+  },
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "python": "3.13.16",
+  "horizons": {
+    "90": {
+      "params": {
+        "hidden": 42,
+        "layers": 3,
+        "dropout": 0.4375326779425164,
+        "lr": 0.02272101658268259,
+        "noise_dist": "gaussian"
+      },
+      "best_val_crps": 17.802478790283203,
+      "best_trial": 27,
+      "trials_complete": 100,
+      "complete": true,
+      "tuning_minutes_last_run": 65.3,
+      "val_len": 120,
+      "validation_period": [
+        "2024-06-05",
+        "2024-10-02"
+      ],
+      "test_period": [
+        "2024-10-03",
+        "2024-12-31"
+      ],
+      "validation_origins": [
+        "2024-07-05"
+      ]
+    }
+  }
+}
