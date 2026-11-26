@@ -1,0 +1,23 @@
+# Multivariate (spatiotemporal) experiments (Mumbai PM10)
+# Versions recorded in multivariate/results/config/run_info.json (Kaggle, Python 3.13.16, Tesla T4).
+# Use a separate environment from the univariate part (different darts version).
+
+stengression==0.0.3
+torch==2.11.0          # the runs used the CUDA 13.0 build (2.11.0+cu130)
+lightning==2.6.6
+darts==0.48.1          # DeepAR benchmark
+gluonts==0.17.0        # Prob-iTransformer benchmark
+optuna==5.1.0
+numpy==2.1.3
+pandas==2.3.3
+matplotlib
+plotly                 # Optuna plots in the tuning notebooks
+openpyxl               # Excel export of the results table
+easydict               # needed by the DiffSTG code
+statsforecast
+
+# Not installable with pip:
+# - GpGp benchmark: R with the GpGp package (install.packages("GpGp")).
+#   final-testing.ipynb installs R and GpGp itself if they are missing.
+# - DiffSTG and STESN: the notebook clones the authors' repositories at run time
+#   (github.com/wenhaomin/DiffSTG, github.com/hhuang90/KSA-wind-forecast).
