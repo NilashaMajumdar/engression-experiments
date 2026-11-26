@@ -1,0 +1,15 @@
+# Univariate experiments (Venezuela dengue and malaria)
+# Versions recorded in univariate/results/config/run_info.json (Kaggle, Python 3.13.16, Tesla T4).
+# Use a separate environment from the multivariate part: darts 0.48+ breaks engressionts 0.1.1.
+
+engressionts==0.1.1
+darts==0.47.0
+torch==2.11.0          # the runs used the CUDA 13.0 build (2.11.0+cu130)
+pytorch-lightning==2.6.6
+optuna==5.1.0
+numpy==2.1.3
+pandas==2.3.3
+scikit-learn
+matplotlib
+openpyxl               # reads the .xlsx data files
+statsforecast          # AutoARIMA / AutoETS benchmarks in the tuning notebooks
